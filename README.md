@@ -1,5 +1,183 @@
-# caseworker-taskmanagement-system
+# Caseworker Task Management System
 
 A new system for caseworkers to efficiently manage their tasks.
-The will create, read, update and delete tasks through a restful
-API and frontend interface.
+The application allows users to create, read, update and delete tasks through a RESTful API and frontend interface.
+
+---
+
+## Features
+
+### Backend API
+
+- Create tasks
+- Retrieve all tasks
+- Retrieve a single task by ID
+- Update task status/details
+- Delete tasks
+- MongoDB database integration
+- Validation and error handling
+- Automated API testing using Jest and Supertest
+
+## API Endpoints
+
+### GET /api/tasks
+
+Retrieve all tasks.
+
+---
+
+### GET /api/tasks/:id
+
+Retrieve a single task by ID.
+
+---
+
+### POST /api/tasks
+
+Create a new task.
+
+#### Example Request Body
+
+```json
+{
+  "title": "Complete report",
+  "description": "Finish monthly report",
+  "status": "Pending",
+  "dueDate": "2026-06-01"
+}
+```
+
+---
+
+### PUT /api/tasks/:id
+
+Update a task.
+
+---
+
+### DELETE /api/tasks/:id
+
+Delete a task.
+
+## Validation & Error Handling
+
+The API includes:
+
+- Required field validation
+- Status validation using enums
+- Proper HTTP status codes
+- Error handling using try/catch blocks
+
+## Tech Stack
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+
+### Frontend
+
+- Create tasks
+- View tasks
+- Update task status
+- Delete tasks
+- User-friendly interface built with React
+
+---
+
+- React.js
+- Axios
+
+### Testing
+
+## Running Tests
+
+Run backend tests:
+
+```bash
+npm test
+```
+
+Tests were implemented using:
+
+- Jest
+- Supertest
+
+### Version Control
+
+- Git
+- GitHub
+
+---
+
+## Project Structure
+
+```bash
+Case-Management/
+│
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── tests/
+│   ├── app.js
+│   ├── server.js
+│   └── .env
+│
+├── frontend/
+│
+└── README.md
+```
+
+## Installation & Setup
+
+### 1. Clone Repository
+
+```bash
+git clone <repository-url>
+```
+
+---
+
+### 2. Navigate to Backend
+
+```bash
+cd backend
+```
+
+---
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 4. Create Environment Variables
+
+Create a `.env` file inside the backend folder:
+
+```env
+PORT=5050
+
+MONGO_URI=your_mongodb_connection_string
+```
+
+---
+
+### 5. Start Backend Server
+
+```bash
+npm run dev
+```
+
+Server runs on:
+
+```txt
+http://localhost:5050
+```
