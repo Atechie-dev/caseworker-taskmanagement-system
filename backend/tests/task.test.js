@@ -63,8 +63,36 @@ describe("Task API", () => {
       
       });
 
-});
+        it("should update a task", async () => {
+    
+            const task = await Task.create({
+            title: "Task to Update",
+            dueDate: "2026-06-01"
+            });
+        
+            const response = await request(app)
+            .put(`/api/tasks/${task._id}`)
+            .send({ status: "In Progress" });
+        
+            expect(response.status).toBe(200);
 
+    });
+
+    it("should delete a task", async () => {
+
+        const task = await Task.create({
+          title: "Delete Me",
+          dueDate: "2026-06-01"
+        });
+      
+        const response = await request(app)
+          .delete(`/api/tasks/${task._id}`);
+      
+        expect(response.status).toBe(200);
+      
+      });
+
+})
 
 afterAll(async () => {
   await mongoose.connection.close();
