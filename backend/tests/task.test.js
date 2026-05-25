@@ -1,3 +1,4 @@
+const Task = require("../models/Task");
 const request = require("supertest");
 const mongoose = require("mongoose");
 
@@ -44,9 +45,23 @@ describe("Task API", () => {
         dueDate: "2026-06-01"
         });
 
-    expect(response.status).toBe(500);
+    expect(response.status).toBe(400);
 
     });
+
+    it("should get a single task", async () => {
+
+        const task = await Task.create({
+          title: "Test Task",
+          dueDate: "2026-06-01"
+        });
+      
+        const response = await request(app)
+          .get(`/api/tasks/${task._id}`);
+      
+        expect(response.status).toBe(200);
+      
+      });
 
 });
 
