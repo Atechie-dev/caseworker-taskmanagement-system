@@ -27,9 +27,31 @@ describe("Task API", () => {
 
   });
 
+  it("should get all tasks", async () => {
+
+    const response = await request(app)
+      .get("/api/tasks");
+  
+    expect(response.status).toBe(200);
+  
+  });
+
+    it("should fail if title is missing", async () => {
+
+    const response = await request(app)
+        .post("/api/tasks")
+        .send({
+        dueDate: "2026-06-01"
+        });
+
+    expect(response.status).toBe(500);
+
+    });
+
 });
 
 
 afterAll(async () => {
   await mongoose.connection.close();
 });
+
