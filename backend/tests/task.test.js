@@ -112,8 +112,14 @@ describe("Task API", () => {
       
       });
 
-      
+     it("should return 400 when creating task with missing fields", async () => {
 
+        const response = await request(app)
+          .post("/api/tasks")
+          .send({ title: "Incomplete Task" });
+      
+        expect(response.status).toBe(400); 
+    })
 
 })
 
