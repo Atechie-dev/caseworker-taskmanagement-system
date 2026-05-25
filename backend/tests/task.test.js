@@ -92,6 +92,29 @@ describe("Task API", () => {
       
       });
 
+     it("should return 404 for non-existent task", async () => {
+
+        const nonExistentId = new mongoose.Types.ObjectId();
+      
+        const response = await request(app)
+          .get(`/api/tasks/${nonExistentId}`);
+      
+        expect(response.status).toBe(404);
+      
+      });
+
+      it("should return 400 for invalid task ID", async () => {
+
+        const response = await request(app)
+          .get("/api/tasks/invalid-id");
+      
+        expect(response.status).toBe(500);
+      
+      });
+
+      
+
+
 })
 
 afterAll(async () => {
