@@ -21,7 +21,7 @@ describe("Task API", () => {
       .post("/api/tasks")
       .send({
         title: "Write tests",
-        dueDate: "01-06-2026"
+        dueDate: "2026-03-04"
       });
 
     expect(response.status).toBe(201);
@@ -42,7 +42,7 @@ describe("Task API", () => {
     const response = await request(app)
         .post("/api/tasks")
         .send({
-        dueDate: "2026-06-01"
+        dueDate: "2026-03-04"
         });
 
     expect(response.status).toBe(400);
@@ -53,7 +53,7 @@ describe("Task API", () => {
 
         const task = await Task.create({
           title: "Test Task",
-          dueDate: "2026-06-01"
+          dueDate: "2026-03-04"
         });
       
         const response = await request(app)
@@ -67,7 +67,7 @@ describe("Task API", () => {
     
             const task = await Task.create({
             title: "Task to Update",
-            dueDate: "2026-06-01"
+            dueDate: "2026-03-04"
             });
         
             const response = await request(app)
@@ -82,7 +82,7 @@ describe("Task API", () => {
 
         const task = await Task.create({
           title: "Delete Me",
-          dueDate: "2026-06-01"
+          dueDate: "2026-03-04"
         });
       
         const response = await request(app)
