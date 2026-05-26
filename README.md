@@ -7,6 +7,9 @@ The application allows users to create, read, update and delete tasks through a 
 
 ## Features
 
+- Accessibility-aware user interface
+- Full CRUD functionality
+
 ### Backend API
 
 - Create tasks
@@ -43,7 +46,7 @@ Create a new task.
   "title": "Complete report",
   "description": "Finish monthly report",
   "status": "Pending",
-  "dueDate": "2026-06-01"
+  "dueDate": "2026-04-03"
 }
 ```
 
@@ -79,6 +82,26 @@ The API includes:
 
 ### Frontend
 
+### Frontend Setup
+
+Navigate to frontend application:
+
+```bash
+cd frontend/case-management-system
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
 - Create tasks
 - View tasks
 - Update task status
@@ -88,6 +111,7 @@ The API includes:
 ---
 
 - React.js
+- Vite
 - Axios
 
 ### Testing
@@ -104,6 +128,8 @@ Tests were implemented using:
 
 - Jest
 - Supertest
+- React Testing Library
+- Vitest
 
 ### Version Control
 
@@ -181,3 +207,26 @@ Server runs on:
 ```txt
 http://localhost:5050
 ```
+
+## Repository
+
+GitHub Repository:
+
+https://github.com/Atechie-dev/caseworker-taskmanagement-system
+
+## Future Improvements
+
+- User authentication
+- Role-based access control
+- Search/filter functionality
+- CI/CD pipeline
+
+## Alternative Implementation Approach
+
+Although this solution was implemented using React, Node.js, Express, and MongoDB, a similar application could also be developed using Microsoft Power Platform technologies such as:
+
+- Power Apps
+- Dataverse
+- Power Automate
+
+This could provide a low-code alternative for HMCTS since it is already operating within the Microsoft ecosystem.
