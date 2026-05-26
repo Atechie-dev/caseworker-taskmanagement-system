@@ -93,6 +93,26 @@ function App() {
     }
   };
 
+  // UPDATE TASK STATUS
+    const updateStatus = async (id) => {
+
+      try {
+
+        await axios.put(
+          `${API_URL}/${id}`,
+          {
+            status: "Completed"
+          }
+        );
+
+        fetchTasks();
+
+      } catch (error) {
+
+        console.error(error);
+      }
+    };
+
 
   return (
 
@@ -205,7 +225,20 @@ function App() {
             Delete
           </button>
 
+          {task.status !== "Completed" && (
+
+          <button
+            onClick={() =>
+              updateStatus(task._id)
+           }
+         >
+           Mark Completed
+        </button>
+
+    )}
+
         </div>
+        
 
       ))}
 
