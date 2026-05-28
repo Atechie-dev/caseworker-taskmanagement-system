@@ -82,23 +82,34 @@ The API includes:
 
 ### Frontend
 
+- React.js
+- Vite
+- Axios
+
 ### Frontend Setup
 
 Navigate to frontend application:
 
-```bash
-cd frontend/case-management-system
+```on the terminal
+cd frontend/task-management-system
 ```
 
 Install dependencies:
 
-```bash
+```on the terminal
+npm create vite@latest
+Enter the project name:task-management-system
+Select framework: React
+Select variant: JavaScript
+Done. Now run:
+cd task-management-system
 npm install
+npm run dev
 ```
 
 Start development server:
 
-```bash
+```on the terminal
 npm run dev
 ```
 
@@ -110,17 +121,13 @@ npm run dev
 
 ---
 
-- React.js
-- Vite
-- Axios
-
 ### Testing
 
 ## Running Tests
 
 Run backend tests:
 
-```bash
+```on the terminal
 npm test
 ```
 
@@ -140,29 +147,29 @@ Tests were implemented using:
 
 ## Project Structure
 
-```bash
+```on the terminal
 Case-Management/
-│
-├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── tests/
-│   ├── app.js
-│   ├── server.js
-│   └── .env
-│
-├── frontend/
-│
-└── README.md
+|
+|--- backend/
+|   |-- config/
+|   |-- controllers/
+|   |-- models/
+|   |-- routes/
+|   |-- tests/
+|   |-- app.js
+|   |-- server.js
+|   |-- .env
+|
+|-- frontend/
+|
+|-- README.md
 ```
 
 ## Installation & Setup
 
 ### 1. Clone Repository
 
-```bash
+```on the terminal
 git clone <repository-url>
 ```
 
@@ -170,7 +177,7 @@ git clone <repository-url>
 
 ### 2. Navigate to Backend
 
-```bash
+```on the terminal
 cd backend
 ```
 
@@ -178,7 +185,7 @@ cd backend
 
 ### 3. Install Dependencies
 
-```bash
+```on the terminal
 npm install
 ```
 
@@ -198,7 +205,7 @@ MONGO_URI=your_mongodb_connection_string
 
 ### 5. Start Backend Server
 
-```bash
+```on the terminal
 npm run dev
 ```
 
