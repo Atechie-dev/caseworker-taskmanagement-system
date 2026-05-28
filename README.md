@@ -88,40 +88,36 @@ The API includes:
 
 ### Frontend Setup
 
-Navigate to frontend application:
+Navigate to the frontend application:
 
-```on the terminal
+```bash
 cd frontend/task-management-system
 ```
 
 Install dependencies:
 
-```on the terminal
-npm create vite@latest
-Enter the project name:task-management-system
-Select framework: React
-Select variant: JavaScript
-Done. Now run:
-cd task-management-system
+```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Start development server:
+Frontend runs on:
 
-```on the terminal
-npm run dev
+```txt
+http://localhost:5173
 ```
-
-- Create tasks
-- View tasks
-- Update task status
-- Delete tasks
-- User-friendly interface built with React
 
 ---
 
 ### Testing
+
+- Backend API integration testing
+- Frontend component testing
 
 ## Running Tests
 
